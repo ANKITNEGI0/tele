@@ -3,158 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Resource Hub</title>
+    <title>TutorialsDuniya</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        header {
-            background-color: #3B5998;
+        .header {
+            background-color: red;
             color: white;
-            padding: 1rem 0;
-            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
+        .header a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        .header .nav {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .header .nav .nav-item {
+            margin: 0 10px;
+        }
+
+        .header .nav .nav-item .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .header .nav .nav-item .dropdown a {
+            color: black;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .header .nav .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 36px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .content .cta {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .stats .stat {
+            text-align: center;
+        }
+
+        .stats .stat .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .stats .stat .number {
+            font-size: 24px;
             font-weight: bold;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
+        .stats .stat .text {
+            font-size: 16px;
         }
 
-        section {
-            margin-bottom: 2rem;
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
         }
 
-        section h2 {
-            color: #3B5998;
-            border-bottom: 2px solid #3B5998;
-            padding-bottom: 0.5rem;
-        }
-
-        section p {
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .card {
-            border: 1px solid #ddd;
+        .buttons .button {
+            padding: 15px 30px;
             border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            background-color: #f9f9f9;
-        }
-
-        .card h3 {
-            margin-top: 0;
-        }
-
-        .card a {
-            color: #3B5998;
             text-decoration: none;
+            color: white;
+            font-weight: bold;
         }
 
-        @media (min-width: 600px) {
-            .card-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            .card {
-                width: 48%;
-            }
+        .buttons .button.college {
+            background-color: green;
         }
 
-        @media (min-width: 900px) {
-            nav ul li {
-                margin: 0 2rem;
+        .buttons .button.school {
+            background-color: purple;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
             }
 
-            .card {
-                width: 30%;
+            .header .nav {
+                margin-top: 10px;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+
+            .stats .stat {
+                margin-bottom: 20px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .buttons .button {
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>College Resource Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#notes">Notes</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <div class="logo">TutorialsDuniya</div>
+        <nav class="nav">
+            <a href="#">TD Store</a>
+            <div class="nav-item">
+                <a href="#">Notes</a>
+                <div class="dropdown">
+                    <a href="#">DU Notes</a>
+                    <a href="#">CUET Exam Details</a>
+                    <a href="#">NCERT Books</a>
+                    <a href="#">NCERT Exemplar</a>
+                    <a href="#">CBSE Notes</a>
+                    <a href="#">CBSE Syllabus 2022</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Free Courses</a>
+                <div class="dropdown">
+                    <a href="#">DU Question Papers</a>
+                    <a href="#">Solutions</a>
+                    <a href="#">CBSE Notes</a>
+                    <a href="#">FREE Udemy Courses</a>
+                </div>
+            </div>
+            <a href="#">Projects</a>
+            <div class="nav-item">
+                <a href="#">CBSE</a>
+                <div class="dropdown">
+                    <a href="#">DU Question Papers</a>
+                    <a href="#">CBSE Sample Papers</a>
+                    <a href="#">CBSE Question Papers</a>
+                    <a href="#">CBSE Question Papers</a>
+                    <a href="#">CBSE Question Papers</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Govt. Exam Papers</a>
+                <div class="dropdown">
+                    <a href="#">AFCAT Question Papers</a>
+                    <a href="#">Army Public School Teacher Papers</a>
+                    <a href="#">CDS Question Papers</a>
+                    <a href="#">GAT Question Papers</a>
+                    <a href="#">CLAT Question Papers</a>
+                    <a href="#">CTET Question Papers</a>
+                    <a href="#">NDA Question Papers</a>
+                </div>
+            </div>
+            <a href="#"><i class="fa fa-search"></i></a>
         </nav>
     </header>
 
-    <section id="about" class="container">
-        <h2>About Us</h2>
-        <p>Welcome to the College Resource Hub! This is your go-to platform for finding study notes, project materials, and other academic resources. Our goal is to make learning more accessible and organized for college students.</p>
-    </section>
+    <main class="content">
+        <h1>Welcome to TutorialsDuniya.com</h1>
+        <p>TutorialsDuniya is one of the fastest-growing and most trusted academic FREE Study Material website for all School & College Students.</p>
+        <p>Explore, Discover, Learn <br> FREE Education for a Better Future!</p>
+        <a href="#" class="cta">Get Started</a>
 
-    <section id="notes" class="container">
-        <h2>Notes</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Subject 1</h3>
-                <p>Brief description of the notes available for this subject.</p>
-                <a href="#">View Notes</a>
+        <div class="stats">
+            <div class="stat">
+                <i class="fa fa-book icon"></i>
+                <div class="number">1,000+</div>
+                <div class="text">Free Study Materials</div>
             </div>
-            <div class="card">
-                <h3>Subject 2</h3>
-                <p>Brief description of the notes available for this subject.</p>
-                <a href="#">View Notes</a>
+            <div class="stat">
+                <i class="fa fa-users icon"></i>
+                <div class="number">10,00,000+</div>
+                <div class="text">Monthly Students</div>
             </div>
-            <div class="card">
-                <h3>Subject 3</h3>
-                <p>Brief description of the notes available for this subject.</p>
-                <a href="#">View Notes</a>
+            <div class="stat">
+                <i class="fa fa-file-text icon"></i>
+                <div class="number">1,00,00,000+</div>
+                <div class="text">Monthly Page Views</div>
             </div>
-            <!-- Add more cards as needed -->
+            <div class="stat">
+                <i class="fa fa-user-plus icon"></i>
+                <div class="number">100+</div>
+                <div class="text">Contributors</div>
+            </div>
         </div>
-    </section>
 
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, suggestions, or would like to contribute, feel free to reach out to us at <a href="mailto:contact@collegeresourcehub.com">contact@collegeresourcehub.com</a>.</p>
-    </section>
+        <div class="buttons">
+            <a href="#" class="button college">FREE Study Material for College Students</a>
+            <a href="#" class="button school">FREE Study Material for School Students</a>
+        </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 College Resource Hub. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2023 TutorialsDuniya. All rights reserved.</p>
     </footer>
 </body>
 </html>
