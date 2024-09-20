@@ -1,1 +1,160 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Professional Homepage</title><style>body{font-family:Arial,sans-serif;margin:0;padding:0}header{background-color:#4caf50;color:#fff;padding:1rem 0}header h1{margin:0;text-align:center}nav ul{list-style:none;padding:0;text-align:center}nav ul li{display:inline;margin:0 1rem}nav ul li a{color:#fff;text-decoration:none}.container{width:80%;margin:0 auto;padding:2rem 0}section h2{color:#4caf50}footer{background-color:#333;color:#fff;text-align:center;padding:1rem 0;position:fixed;width:100%;bottom:0}</style></head><body><header><div class="container"><h1>Welcome to My Professional Homepage</h1><nav><ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></nav></div></header><section id="about" class="container"><h2>About Me</h2><p>This is where you can introduce yourself and explain the purpose of the website.</p></section><section id="projects" class="container"><h2>Projects</h2><p>List and briefly describe your key projects here. Provide links to their respective GitHub repositories.</p></section><section id="contact" class="container"><h2>Contact</h2><p>Provide your contact information here. You can include an email address, LinkedIn profile, etc.</p></section><footer><div class="container"><p>&copy; 2024 Your Name. All rights reserved.</p></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Resource Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3B5998;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: #3B5998;
+            border-bottom: 2px solid #3B5998;
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f9f9f9;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card a {
+            color: #3B5998;
+            text-decoration: none;
+        }
+
+        @media (min-width: 600px) {
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                width: 48%;
+            }
+        }
+
+        @media (min-width: 900px) {
+            nav ul li {
+                margin: 0 2rem;
+            }
+
+            .card {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Resource Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>Welcome to the College Resource Hub! This is your go-to platform for finding study notes, project materials, and other academic resources. Our goal is to make learning more accessible and organized for college students.</p>
+    </section>
+
+    <section id="notes" class="container">
+        <h2>Notes</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Subject 1</h3>
+                <p>Brief description of the notes available for this subject.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Subject 2</h3>
+                <p>Brief description of the notes available for this subject.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Subject 3</h3>
+                <p>Brief description of the notes available for this subject.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or would like to contribute, feel free to reach out to us at <a href="mailto:contact@collegeresourcehub.com">contact@collegeresourcehub.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 College Resource Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
